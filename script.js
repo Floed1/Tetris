@@ -62,6 +62,9 @@ function drawMatrix(matrix, offset) {
         if (value !== 0) {
           context.fillStyle = colors[value];
           context.fillRect(x + offset.x, y + offset.y, 1, 1);
+          context.strokeStyle = 'black';
+          context.lineWidth = 0.1;
+          context.strokeRect(x + offset.x, y + offset.y, 1, 1)
         }
       });
     });
