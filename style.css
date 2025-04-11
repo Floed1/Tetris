@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0080;
+    text-transform: uppercase;
+    animation: neonGlow 3s infinite alternate;
+}
+  
+  .game-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid rgb(255, 0, 234);
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    padding: 16px;
+    width: 90vw;
+    max-width: 320px;
+    height: 90vh;
+    max-height: 600px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tetris-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  canvas {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    background: black;
+    border: 2px solid rgb(255, 0, 242);
+  }
+  
+  .scoreboard {
+    width: 100%;
+    text-align: center;
+    min-height: 100px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  
+  .scoreboard p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  button {
+    margin-top: 8px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 234);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  #gameOverScreen p {
+    margin-top: -65px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  @keyframes neonGlow {
+    0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+    50% { text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+    100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+}
